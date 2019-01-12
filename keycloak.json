@@ -1,0 +1,12 @@
+{
+  "realm": "hammer-cli",
+  "auth-server-url": "https://ssoo1.usersys.redhat.com/auth",
+  "ssl-required": false,
+  "resource": "rest-api-client",
+  "public-client": true,
+  "confidential-port": 0,
+  "credentials": {
+    "secret": ""
+  }
+    
+}

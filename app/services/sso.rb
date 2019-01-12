@@ -2,6 +2,7 @@ module SSO
   METHODS = [Apache, Basic, Oauth]
 
   def self.get_available(controller)
+    binding.pry
     all_methods = all.map { |method| method.new(controller) }
     all_methods.find(&:available?)
   end
