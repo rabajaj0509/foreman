@@ -593,5 +593,6 @@ Foreman::Application.routes.draw do
 
   match 'host_wizard' => 'react#index', :via => :get
 
+  # routes for auth source external, react controller is called from here.
   match 'auth_sources_test' => 'react#index', :via => :get
 end
