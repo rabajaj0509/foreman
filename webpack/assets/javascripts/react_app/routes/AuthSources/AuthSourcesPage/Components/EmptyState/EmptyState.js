@@ -1,39 +1,27 @@
 import React from 'react';
-import { EmptyState, Button } from 'patternfly-react';
+import {
+  Title,
+  Button,
+  EmptyState,
+  EmptyStateVariant,
+  EmptyStateIcon,
+  EmptyStateBody,
+  EmptyStateSecondaryActions,
+} from '@patternfly/react-core';
+import { CubesIcon } from '@patternfly/react-icons';
 
-const AuthSourceEmptyState = props => (
-  <EmptyState>
-    <EmptyState.Icon />
-    <EmptyState.Title>Empty State Title</EmptyState.Title>
-    <EmptyState.Info>
-      This is the Empty State component. The goal of a empty state pattern is to
-      provide a good first impression that helps users to achieve their goals.
-      It should be used when a view is empty because no objects exists and you
-      want to guide the user to perform specific actions.
-</EmptyState.Info>
-    <EmptyState.Help>
-      For more information please see{' '}
-      <a
-        href="#"
-        onClick={event => {
-          event.preventDefault();
-        }}
-      >
-        pfExample
-  </a>
-    </EmptyState.Help>
-    <EmptyState.Action>
-      <Button bsStyle="primary" bsSize="large">
-        Main Action
-  </Button>
-    </EmptyState.Action>
-    <EmptyState.Action secondary>
-      <Button>Secondary Action 1</Button>
-      <Button>Secondary Action 2</Button>
-      <Button title="Perform an action">Secondary Action 3</Button>
-    </EmptyState.Action>
+const AuthSourceEmptyState = () => (
+  <EmptyState variant={EmptyStateVariant.full}>
+    <EmptyStateIcon icon={CubesIcon} />
+    <Title headingLevel="h5" size="lg">
+      Auth Sources
+    </Title>
+    <EmptyStateBody>
+      This represents an the empty state pattern in Patternfly 4. Hopefully it's
+      simple enough to use but flexible enough to meet a variety of needs.
+    </EmptyStateBody>
+    <Button variant="primary">Create LDAP</Button>
   </EmptyState>
-
 );
 
 export default AuthSourceEmptyState;
